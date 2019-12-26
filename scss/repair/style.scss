@@ -1,0 +1,9 @@
+// just simple import scss-partials
+@import "../variables"; // подключаем переменные
+@import "../mixins"; // подключаем миксины
+@import "../fonts"; // подключаем шрифты
+@import "../primeflex"; // подключаем flex-сетку из фреймворка PrimeNG
+@import "../default"; // подключаем дефолтные стили
+
+// Custom styles
+.repair-page {}

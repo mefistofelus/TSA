@@ -1,0 +1,35 @@
+// color variables
+$primaryColor: #5B5D9C;
+$primaryTextColor: #FFFFFF;
+$accentColor: #E59746;
+$borderColor: #828282;
+$bodyBgColor: #FFFFFF;
+$contentBgColor:#F9F9FB;
+$inputBorderColor: #828282;
+$inputInvalidBorderColor: #e62a10;
+$inputErrorTextColor: $inputInvalidBorderColor;
+$inputValidBorderColor: #4CAF50;
+$inputErrorTextColor: $inputValidBorderColor;
+$errorMessageFontSize: 11px;
+
+//button variables
+$btnBorderRadius: 50px;
+
+// font variables
+$fontSize:18;
+$textColor:#0C253D;
+$textLightColor:#E0E0E0;
+$textHoverColor:#FFFFFF;
+$textDarkColor:#4F4F4F;
+$textSearchCategoryColor:rgba(0, 0, 0, 0.8);
+$textSearchContentColor:rgba(0, 0, 0, 0.64);
+$textPrimaryColor:#969FC2;
+$textAccentColor:#E59746;
+
+// misc variables
+$borderRadius:16px;
+$iconWidth:24px;
+$iconHeight:24px;
+$iconFontSize:32px;
+$transitionDuration:.3s;
+$transition-animation: .65s;
