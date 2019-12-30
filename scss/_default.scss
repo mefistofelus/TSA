@@ -12,6 +12,8 @@ body {
   position: relative;
   font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
   font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
   color: $textColor;
   -webkit-font-smoothing: antialiased;
   min-height: 100%;
@@ -34,6 +36,10 @@ body {
   box-sizing: border-box;
 }
 
+*::selection {
+  background: $primaryColor;
+}
+
 h1,
 h2,
 h3,
@@ -44,12 +50,21 @@ h6 {
   padding: 0;
 }
 
+img {
+  max-width: 100%;
+}
+
 a {
   color: inherit;
   text-decoration: none;
 }
 
 p {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
   margin: 0;
   padding: 0;
 }
