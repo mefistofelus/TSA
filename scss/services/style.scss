@@ -1,0 +1,131 @@
+// just simple import scss-partials
+@import "../variables"; // подключаем переменные
+@import "../mixins"; // подключаем миксины
+@import "../fonts"; // подключаем шрифты
+@import "../primeflex"; // подключаем flex-сетку из фреймворка PrimeNG
+@import "../default"; // подключаем дефолтные стили
+
+// Custom styles
+
+.services {
+  margin-top: 120px;
+
+  // .container
+
+  .container {
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+
+  //.heading-box
+
+  .heading-box {
+    margin-bottom: 60px;
+
+    //heading-box__title
+
+    .heading-box__title {
+      font-weight: bold;
+      font-size: 48px;
+      line-height: 60px;
+      text-align: center;
+      color: $textColor;
+    }
+  }
+
+  // .services-categories
+
+  &-categories {}
+
+  // .services__category
+
+  &__category {
+
+    // .services__category-item
+
+    &-item {
+      height: 110px;
+      padding: 0 40px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      background-color: $contentBgColor;
+      border-radius: $borderRadius;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      -webkit-transition: $transitionDuration;
+      transition: $transitionDuration;
+
+      // .services__category-item::before
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: -webkit-gradient(linear, left bottom, left top, from(rgba(85, 105, 184, 0.64)), to(rgba(85, 105, 184, 0.64)));
+        background: linear-gradient(0deg, rgba(85, 105, 184, 0.64), rgba(85, 105, 184, 0.64));
+        opacity: 0;
+        z-index: 2;
+        -webkit-transition: $transitionDuration;
+        transition: $transitionDuration;
+      }
+
+      &:hover {
+        -webkit-box-shadow: 0px 8px 20px rgba(62, 64, 132, 0.24);
+        box-shadow: 0px 8px 20px rgba(62, 64, 132, 0.24);
+      }
+
+      &:hover::before {
+        opacity: 1;
+      }
+
+      &:hover .category-item__title {
+        color: $textLightColor;
+      }
+
+      &:hover .category-item__bg {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+      }
+
+      // .category-item
+
+      .category-item {
+
+        // .category-item__bg
+
+        &__bg {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          -webkit-transform: scale(0);
+          transform: scale(0);
+        }
+
+        // .category-item__title
+
+        &__title {
+          font-weight: 600;
+          font-size: 24px;
+          line-height: 30px;
+          text-align: center;
+          color: $textDarkColor;
+          position: relative;
+          z-index: 3;
+        }
+      }
+    }
+  }
+}
