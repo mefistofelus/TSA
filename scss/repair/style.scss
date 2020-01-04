@@ -195,7 +195,6 @@
   // .repairing-catalogue
 
   .repairing-catalogue {
-    margin-bottom: 120px;
     background-color: $contentBgColor;
     border-radius: $borderRadius;
     -webkit-box-shadow: 0px 12px 24px rgba(62, 64, 132, 0.16);
@@ -280,7 +279,6 @@
       color: $textColor;
       position: relative;
       border-radius: 16px;
-      cursor: pointer;
       overflow: hidden;
       -webkit-transition: $transitionDuration;
       transition: $transitionDuration;

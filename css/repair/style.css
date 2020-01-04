@@ -980,7 +980,6 @@ li {
 }
 
 .repair-page .repairing-catalogue {
-  margin-bottom: 120px;
   background-color: #F9F9FB;
   border-radius: 16px;
   -webkit-box-shadow: 0px 12px 24px rgba(62, 64, 132, 0.16);
@@ -1045,7 +1044,6 @@ li {
   color: #0C253D;
   position: relative;
   border-radius: 16px;
-  cursor: pointer;
   overflow: hidden;
   -webkit-transition: 0.3s;
   transition: 0.3s;
