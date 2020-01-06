@@ -1,0 +1,409 @@
+// just simple import scss-partials
+@import "../variables"; // подключаем переменные
+@import "../mixins"; // подключаем миксины
+@import "../fonts"; // подключаем шрифты
+@import "../primeflex"; // подключаем flex-сетку из фреймворка PrimeNG
+@import "../default"; // подключаем дефолтные стили
+
+// Custom styles
+
+.services-category {
+  margin-top: 120px;
+
+  // .container
+
+  .container {
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+
+  //.heading-box
+
+  .heading-box {
+    margin-bottom: 60px;
+
+    //heading-box__title
+
+    .heading-box__title {
+      font-weight: bold;
+      font-size: 48px;
+      line-height: 60px;
+      text-align: center;
+      color: $textColor;
+    }
+  }
+
+  // .btn
+
+  .btn {
+    padding: 20px 80px;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 23px;
+    color: $primaryTextColor;
+    background-color: $accentColor;
+    border: none;
+    border-radius: $btnBorderRadius;
+    cursor: pointer;
+
+    &:focus {
+      outline: none;
+    }
+
+    &.btn-request {
+      width: 100%;
+    }
+  }
+
+  // .sidebar-section
+
+  .sidebar-section {
+    margin-top: 24px;
+
+    // .section-title
+
+    .section-title {
+      margin-bottom: 10px;
+      font-weight: 600;
+      font-size: 10px;
+      line-height: 13px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: $textPrimaryColor;
+    }
+
+    // .tags
+
+    .tags {
+
+      // .tags-block
+
+      &-block {
+        margin-left: -6px;
+        margin-right: -6px;
+        margin-bottom: -6px;
+      }
+
+      // .tags-item
+
+      &-item {
+        padding: 8px 12px;
+        margin: 6px;
+        display: inline-block;
+        font-size: 14px;
+        text-transform: lowercase;
+        white-space: nowrap;
+        color: $textDarkColor;
+        background-color: $contentBgColor;
+        border-radius: $btnBorderRadius;
+        -webkit-transition: $transitionDuration;
+        transition: $transitionDuration;
+
+        &:hover,
+        &.active {
+          color: $primaryTextColor;
+          background-color: $socialIconsColor;
+        }
+      }
+    }
+
+    // .hours
+
+    .hours {
+
+      // .hours-item
+
+      &-item {
+
+        label {
+          padding-left: 22px;
+          position: relative;
+          font-size: 14px;
+          line-height: 18px;
+          color: $textDarkColor;
+
+          &::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 14px;
+            height: 14px;
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+            background-color: $socialIconsColor;
+            border-radius: 4px;
+          }
+
+          &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 2px;
+            width: 10px;
+            height: 8px;
+            background-image: url('../../img/services-category/checkmark.svg');
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center center;
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+            opacity: 0;
+            -webkit-transition: $transitionDuration;
+            transition: $transitionDuration;
+          }
+        }
+
+        input {
+          display: none;
+
+          &:checked+label::after {
+            opacity: 1;
+          }
+        }
+
+        &+.hours-item {
+          margin-top: 10px;
+        }
+
+        // .services-counter
+
+        .services-counter {
+          padding: 0 5px;
+          font-size: 14px;
+          line-height: 18px;
+          color: $textPrimaryColor;
+          display: inline-block;
+          position: relative;
+
+          &::before {
+            content: '(';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+          }
+
+          &::after {
+            content: ')';
+            position: absolute;
+            top: 50%;
+            right: 0;
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+          }
+        }
+      }
+    }
+  }
+
+  // .results-info
+
+  .results-info {
+    margin-bottom: 25px;
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 13px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: $textPrimaryColor;
+  }
+
+  // .result-item
+
+  .result-item {
+    padding: 32px;
+    background: $contentBgColor;
+    border: 1px solid #DCE7EB;
+    border-radius: $borderRadius;
+
+    // .item-header
+
+    .item-header {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+
+      // .company-logo
+
+      .company-logo {
+        margin-right: 20px;
+        display: block;
+        min-width: 64px;
+        max-width: 64px;
+        height: 64px;
+        overflow: hidden;
+        border-radius: $borderRadius;
+      }
+
+      //.company-content
+
+      .company-content {
+        max-width: 600px;
+
+        //.company-content__title
+
+        &__title {
+          font-weight: 600;
+          font-size: 24px;
+          line-height: 30px;
+          color: $textDarkColor;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          overflow: hidden;
+        }
+
+        //.company-content__subtitle
+
+        &__subtitle {
+          margin-top: 8px;
+          font-size: 20px;
+          line-height: 25px;
+          color: $textPrimaryColor;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          overflow: hidden;
+        }
+      }
+
+      //.company-info
+
+      .company-info {
+        margin-left: auto;
+
+        // .company-info__type
+
+        &__type {
+          max-width: 150px;
+          font-weight: 600;
+          font-size: 10px;
+          line-height: 13px;
+          text-align: right;
+          letter-spacing: 0.08em;
+          text-transform: uppercase;
+          color: $textPrimaryColor;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          overflow: hidden;
+        }
+
+        // .company-info__counter
+
+        &__counter {
+          max-width: 145px;
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 20px;
+          text-align: right;
+          color: #5569B8;
+        }
+      }
+    }
+
+    //.item-content
+    .item-content {
+      margin-top: 32px;
+
+      //.company-advantages
+      .company-advantages {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: flex-start;
+
+        //.advantages-item
+        .advantages-item {
+          max-width: 240px;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-align: start;
+          -ms-flex-align: start;
+          align-items: flex-start;
+
+          &+.advantages-item {
+            margin-left: 24px;
+          }
+
+          //.advantages-item__icon
+          &__icon {
+            min-width: 20px;
+            min-height: 16px;
+            margin-top: 4px;
+            margin-right: 10px;
+          }
+
+          //.advantages-item__text
+          &__text {
+            font-size: 18px;
+            line-height: 23px;
+            color: $textColor;
+          }
+        }
+      }
+
+      //.company-skills
+      .company-skills {
+        margin-top: 32px;
+        padding: 5px 24px;
+        background-color: $primaryColor;
+        -webkit-box-shadow: 0px 12px 24px rgba(62, 64, 132, 0.16);
+        box-shadow: 0px 12px 24px rgba(62, 64, 132, 0.16);
+        border-radius: $borderRadius;
+
+        //.skill-item
+        .skill-item {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          align-items: center;
+          -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+          justify-content: space-between;
+          color: $bodyBgColor;
+
+          //.skill-item__text
+          &__text {
+            max-width: 600px;
+            line-height: 45px;
+          }
+
+          //.skill-item__price
+          &__price {
+            font-weight: bold;
+            text-align: right;
+          }
+
+          &+.skill-item {
+            //padding-top: 12px;
+            border-top: 1px solid #E0E0E0;
+          }
+        }
+      }
+    }
+
+    //.item-footer
+    .item-footer {
+      margin-top: 32px;
+
+      &>.btn-details {
+        margin-right: 40px;
+      }
+
+      .link-details {
+        font-weight: bold;
+        line-height: 23px;
+        color: $textAccentColor;
+      }
+    }
+  }
+
+}
