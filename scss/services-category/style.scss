@@ -10,6 +10,26 @@
 .services-category {
   margin-top: 120px;
 
+  @include _1280 {
+    padding: 0 5px;
+  }
+
+  @include _1024 {
+    margin-top: 90px;
+  }
+
+  @include _992 {
+    margin-top: 70px;
+  }
+
+  @include _768 {
+    margin-top: 50px;
+  }
+
+  @include _480 {
+    margin-top: 35px;
+  }
+
   // .container
 
   .container {
@@ -22,14 +42,67 @@
   .heading-box {
     margin-bottom: 60px;
 
+    @include _1024 {
+      margin-bottom: 40px;
+    }
+
+    @include _992 {
+      margin-bottom: 30px;
+    }
+
+    @include _768 {
+      margin-bottom: 20px;
+    }
+
     //heading-box__title
 
     .heading-box__title {
       font-weight: bold;
       font-size: 48px;
-      line-height: 60px;
       text-align: center;
       color: $textColor;
+
+      @include _992 {
+        font-size: 38px;
+      }
+
+      @include _560 {
+        font-size: 30px;
+      }
+    }
+  }
+
+  //.page-content
+
+  .page-content {
+    position: relative;
+  }
+
+  //.sidebar
+
+  .sidebar {
+    background-color: $bodyBgColor;
+
+    @include _768 {
+      position: absolute;
+      top: 10px;
+      left: 0;
+      width: 50%;
+      height: 100%;
+      padding-left: 10px;
+      -webkit-transform: translateX(-105%);
+      transform: translateX(-105%);
+      -webkit-transition: $transitionDuration;
+      transition: $transitionDuration;
+    }
+
+    @include _560 {
+      width: 100%;
+    }
+
+    &.open {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
     }
   }
 
@@ -39,7 +112,6 @@
     padding: 20px 80px;
     font-weight: bold;
     font-size: 18px;
-    line-height: 23px;
     color: $primaryTextColor;
     background-color: $accentColor;
     border: none;
@@ -52,6 +124,24 @@
 
     &.btn-request {
       width: 100%;
+    }
+
+    @include _1280 {
+      padding: 20px 60px;
+    }
+
+    @include _1170 {
+      padding: 10px 40px;
+    }
+
+    @include _992 {
+      padding: 10px 30px;
+      font-size: 13px;
+    }
+
+    @include _360 {
+      padding: 10px 20px;
+      font-size: 16px;
     }
   }
 
@@ -218,6 +308,10 @@
     border: 1px solid #DCE7EB;
     border-radius: $borderRadius;
 
+    @include _360 {
+      padding: 10px;
+    }
+
     // .item-header
 
     .item-header {
@@ -227,6 +321,16 @@
       -webkit-box-align: center;
       -ms-flex-align: center;
       align-items: center;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+
+      @include _480 {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        text-align: center;
+      }
 
       // .company-logo
 
@@ -238,23 +342,35 @@
         height: 64px;
         overflow: hidden;
         border-radius: $borderRadius;
+
+        @include _480 {
+          margin-right: 0;
+        }
       }
 
       //.company-content
 
       .company-content {
         max-width: 600px;
+        margin-right: 20px;
+
+        @include _480 {
+          margin-right: 0;
+        }
 
         //.company-content__title
 
         &__title {
           font-weight: 600;
           font-size: 24px;
-          line-height: 30px;
           color: $textDarkColor;
           white-space: nowrap;
           text-overflow: ellipsis;
           overflow: hidden;
+
+          @include _992 {
+            font-size: 20px;
+          }
         }
 
         //.company-content__subtitle
@@ -267,6 +383,10 @@
           white-space: nowrap;
           text-overflow: ellipsis;
           overflow: hidden;
+
+          @include _992 {
+            font-size: 14px;
+          }
         }
       }
 
@@ -274,6 +394,21 @@
 
       .company-info {
         margin-left: auto;
+
+        @include _992 {
+          margin-top: 10px;
+          width: 100%;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          align-items: center;
+          -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+          justify-content: space-between;
+          border-top: 1px solid $borderColor;
+        }
 
         // .company-info__type
 
@@ -289,6 +424,10 @@
           white-space: nowrap;
           text-overflow: ellipsis;
           overflow: hidden;
+
+          @include _992 {
+            font-size: 14px;
+          }
         }
 
         // .company-info__counter
@@ -300,6 +439,10 @@
           line-height: 20px;
           text-align: right;
           color: #5569B8;
+
+          @include _992 {
+            max-width: 200px;
+          }
         }
       }
     }
@@ -307,6 +450,10 @@
     //.item-content
     .item-content {
       margin-top: 32px;
+
+      @include _992 {
+        margin-top: 20px;
+      }
 
       //.company-advantages
       .company-advantages {
@@ -316,6 +463,13 @@
         -webkit-box-align: start;
         -ms-flex-align: start;
         align-items: flex-start;
+
+        @include _992 {
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+          flex-direction: column;
+        }
 
         //.advantages-item
         .advantages-item {
@@ -327,8 +481,26 @@
           -ms-flex-align: start;
           align-items: flex-start;
 
+          @include _992 {
+            margin-left: 24px;
+            max-width: 400px;
+          }
+
+          @include _480 {
+            margin-left: 5px;
+            max-width: 400px;
+          }
+
           &+.advantages-item {
             margin-left: 24px;
+
+            @include _992 {
+              margin-top: 5px;
+            }
+
+            @include _480 {
+              margin-left: 5px;
+            }
           }
 
           //.advantages-item__icon
@@ -337,6 +509,10 @@
             min-height: 16px;
             margin-top: 4px;
             margin-right: 10px;
+
+            @include _480 {
+              margin-right: 5px;
+            }
           }
 
           //.advantages-item__text
@@ -344,6 +520,10 @@
             font-size: 18px;
             line-height: 23px;
             color: $textColor;
+
+            @include _480 {
+              font-size: 14px;
+            }
           }
         }
       }
@@ -356,6 +536,14 @@
         -webkit-box-shadow: 0px 12px 24px rgba(62, 64, 132, 0.16);
         box-shadow: 0px 12px 24px rgba(62, 64, 132, 0.16);
         border-radius: $borderRadius;
+
+        @include _992 {
+          margin-top: 20px;
+        }
+
+        @include _560 {
+          padding-bottom: 15px;
+        }
 
         //.skill-item
         .skill-item {
@@ -370,16 +558,39 @@
           justify-content: space-between;
           color: $bodyBgColor;
 
+          @include _560 {
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            -webkit-box-align: start;
+            -ms-flex-align: start;
+            align-items: flex-start;
+          }
+
           //.skill-item__text
           &__text {
-            max-width: 600px;
-            line-height: 45px;
+            max-width: 570px;
+            padding: 12px 0 12px 0;
+
+            @include _992 {
+              font-size: 16px;
+            }
           }
 
           //.skill-item__price
           &__price {
             font-weight: bold;
             text-align: right;
+
+            @include _992 {
+              font-size: 14px;
+            }
+
+            @include _560 {
+              -ms-flex-item-align: end;
+              align-self: flex-end;
+            }
           }
 
           &+.skill-item {
@@ -394,16 +605,42 @@
     .item-footer {
       margin-top: 32px;
 
+      @include _992 {
+        margin-top: 20px;
+      }
+
       &>.btn-details {
         margin-right: 40px;
+
+        @include _992 {
+          margin-right: 20px;
+        }
+
+        @include _560 {
+          width: 100%;
+        }
       }
 
       .link-details {
         font-weight: bold;
         line-height: 23px;
         color: $textAccentColor;
+
+        @include _992 {
+          margin-top: 20px;
+          font-size: 14px;
+        }
+
+        @include _560 {
+          display: inline-block;
+          width: 100%;
+          text-align: center;
+        }
+
+        @include _480 {
+          margin-top: 10px;
+        }
       }
     }
   }
-
 }
