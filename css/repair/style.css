@@ -824,6 +824,10 @@ li {
   list-style-type: none;
 }
 
+.repair-page {
+  overflow-x: hidden;
+}
+
 .repair-page .container {
   max-width: 1280px;
   margin: 0 auto;
@@ -833,6 +837,30 @@ li {
   margin-bottom: 120px;
   border-top: 1px solid #828282;
   border-bottom: 1px solid #828282;
+}
+
+@media all and (max-width: 1024px) {
+  .repair-page .searchbar {
+    margin-bottom: 80px;
+  }
+}
+
+@media all and (max-width: 992px) {
+  .repair-page .searchbar {
+    margin-bottom: 60px;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .repair-page .searchbar {
+    margin-bottom: 40px;
+  }
+}
+
+@media all and (max-width: 480px) {
+  .repair-page .searchbar {
+    margin-bottom: 30px;
+  }
 }
 
 .repair-page .searchbar-inner {
@@ -850,6 +878,18 @@ li {
   align-items: center;
 }
 
+@media all and (max-width: 768px) {
+  .repair-page .searchbar-inner {
+    padding: 10px 30px;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .repair-page .searchbar-inner {
+    padding: 0 10px;
+  }
+}
+
 .repair-page .searchbar__location {
   padding: 15px 60px 15px 0;
   display: -webkit-box;
@@ -860,10 +900,36 @@ li {
   align-items: center;
 }
 
+@media all and (max-width: 600px) {
+  .repair-page .searchbar__location {
+    padding: 10px 30px 10px 0;
+  }
+}
+
 .repair-page .searchbar__location-icon {
   width: 26px;
   height: 32px;
   margin-right: 16px;
+}
+
+@media all and (max-width: 768px) {
+  .repair-page .searchbar__location-icon {
+    margin-right: 10px;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .repair-page .searchbar__location-icon {
+    width: 20px;
+    height: 28px;
+  }
+}
+
+@media all and (max-width: 480px) {
+  .repair-page .searchbar__location-icon {
+    width: 15px;
+    height: 22px;
+  }
 }
 
 .repair-page .searchbar__location-descr {
@@ -875,6 +941,12 @@ li {
   color: #969FC2;
 }
 
+@media all and (max-width: 480px) {
+  .repair-page .searchbar__location-descr {
+    font-size: 8px;
+  }
+}
+
 .repair-page .searchbar__location-city {
   max-width: 150px;
   font-weight: bold;
@@ -884,6 +956,12 @@ li {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
+}
+
+@media all and (max-width: 480px) {
+  .repair-page .searchbar__location-city {
+    font-size: 14px;
+  }
 }
 
 .repair-page .searchbar__location-city select {
@@ -907,7 +985,7 @@ li {
 }
 
 .repair-page .searchbar__request {
-  width: 100%;
+  width: 80%;
   padding: 12px 0 12px 32px;
   border-left: 1px solid #828282;
   display: -webkit-box;
@@ -921,6 +999,12 @@ li {
   justify-content: space-between;
 }
 
+@media all and (max-width: 600px) {
+  .repair-page .searchbar__request {
+    padding: 0 0 0 15px;
+  }
+}
+
 .repair-page .searchbar__request-form {
   width: 100%;
   display: -webkit-box;
@@ -929,7 +1013,6 @@ li {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  justify-items: space-between;
 }
 
 .repair-page .searchbar__request-form .form-input {
@@ -948,6 +1031,12 @@ li {
   outline: none;
 }
 
+@media all and (max-width: 480px) {
+  .repair-page .searchbar__request-form .form-input {
+    font-size: 14px;
+  }
+}
+
 .repair-page .searchbar__request-form .form-btn {
   margin-left: auto;
   border: none;
@@ -964,24 +1053,79 @@ li {
   height: 32px;
 }
 
+@media all and (max-width: 600px) {
+  .repair-page .searchbar__request-form .form-icon {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+@media all and (max-width: 480px) {
+  .repair-page .searchbar__request-form .form-icon {
+    width: 20px;
+    height: 20px;
+  }
+}
+
 .repair-page .heading-box {
   margin-bottom: 60px;
+}
+
+@media all and (max-width: 1024px) {
+  .repair-page .heading-box {
+    margin-bottom: 40px;
+  }
+}
+
+@media all and (max-width: 992px) {
+  .repair-page .heading-box {
+    margin-bottom: 30px;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .repair-page .heading-box {
+    margin-bottom: 20px;
+  }
+}
+
+@media all and (max-width: 480px) {
+  .repair-page .heading-box {
+    margin-bottom: 15px;
+  }
 }
 
 .repair-page .heading-box .heading-box__title {
   margin-bottom: 16px;
   font-weight: bold;
   font-size: 48px;
-  line-height: 60px;
   text-align: center;
   color: #0C253D;
 }
 
+@media all and (max-width: 992px) {
+  .repair-page .heading-box .heading-box__title {
+    margin-bottom: 10px;
+    font-size: 38px;
+  }
+}
+
+@media all and (max-width: 560px) {
+  .repair-page .heading-box .heading-box__title {
+    font-size: 30px;
+  }
+}
+
 .repair-page .heading-box .heading-box__subtitle {
   font-size: 20px;
-  line-height: 25px;
   text-align: center;
   color: #969FC2;
+}
+
+@media all and (max-width: 560px) {
+  .repair-page .heading-box .heading-box__subtitle {
+    font-size: 16px;
+  }
 }
 
 .repair-page .repairing-catalogue {
@@ -990,11 +1134,33 @@ li {
   -webkit-box-shadow: 0px 12px 24px rgba(62, 64, 132, 0.16);
   box-shadow: 0px 12px 24px rgba(62, 64, 132, 0.16);
   overflow: hidden;
+  position: relative;
 }
 
 .repair-page .repairing-catalogue .sidebar {
   margin-bottom: -0.5em;
   background-color: #5B5D9C;
+  border-radius: 16px 0 0 16px;
+  overflow: hidden;
+}
+
+@media all and (max-width: 768px) {
+  .repair-page .repairing-catalogue .sidebar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9;
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+}
+
+.repair-page .repairing-catalogue .sidebar.open {
+  -webkit-transform: translateX(0%);
+  transform: translateX(0%);
 }
 
 .repair-page .repairing-catalogue__list-item {
@@ -1005,6 +1171,7 @@ li {
   -ms-flex-align: center;
   align-items: center;
   color: #E0E0E0;
+  overflow-x: hidden;
   background: transparent;
   border-radius: 16px 0px 0px 16px;
   -webkit-transition: 0.3s;
@@ -1025,12 +1192,53 @@ li {
   fill: #E0E0E0;
 }
 
+@media all and (max-width: 1170px) {
+  .repair-page .list-item__icon {
+    margin-left: 30px;
+    min-width: 24px;
+    min-height: 24px;
+  }
+}
+
+@media all and (max-width: 992px) {
+  .repair-page .list-item__icon {
+    margin-left: 20px;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .repair-page .list-item__icon {
+    margin-left: 40px;
+  }
+}
+
 .repair-page .list-item__link {
   display: block;
   width: 100%;
   padding: 24px;
   font-weight: 500;
   font-size: 24px;
+}
+
+@media all and (max-width: 1170px) {
+  .repair-page .list-item__link {
+    padding: 18px;
+    font-size: 18px;
+  }
+}
+
+@media all and (max-width: 992px) {
+  .repair-page .list-item__link {
+    padding: 16px;
+    font-size: 16px;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .repair-page .list-item__link {
+    padding: 16px;
+    font-size: 16px;
+  }
 }
 
 .repair-page .list-item__categories {
@@ -1040,8 +1248,9 @@ li {
 }
 
 .repair-page .list-item__category {
+  margin: 0 auto;
   padding: 48px 12px;
-  width: 200px;
+  max-width: 200px;
   height: 120px;
   font-size: 18px;
   line-height: 23px;
@@ -1052,6 +1261,27 @@ li {
   overflow: hidden;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+}
+
+@media all and (max-width: 1170px) {
+  .repair-page .list-item__category {
+    padding: 38px 10px;
+    height: 105px;
+  }
+}
+
+@media all and (max-width: 992px) {
+  .repair-page .list-item__category {
+    padding: 30px 10px;
+    height: 98px;
+  }
+}
+
+@media all and (max-width: 480px) {
+  .repair-page .list-item__category {
+    padding: 30px 10px;
+    height: 88px;
+  }
 }
 
 .repair-page .list-item__category::before {
