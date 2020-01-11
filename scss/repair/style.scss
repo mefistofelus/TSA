@@ -317,12 +317,17 @@
         position: absolute;
         top: 0;
         left: 0;
-        width: 100%;
+        width: 50%;
+        height: 100%;
         z-index: 9;
         -webkit-transform: translateX(-100%);
         transform: translateX(-100%);
         -webkit-transition: $transitionDuration;
         transition: $transitionDuration;
+      }
+
+      @include _480 {
+        width: 100%;
       }
 
       &.open {
@@ -380,10 +385,6 @@
 
       @include _992 {
         margin-left: 20px;
-      }
-
-      @include _768 {
-        margin-left: 40px;
       }
     }
 

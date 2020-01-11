@@ -1149,12 +1149,19 @@ li {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 50%;
+    height: 100%;
     z-index: 9;
     -webkit-transform: translateX(-100%);
     transform: translateX(-100%);
     -webkit-transition: 0.3s;
     transition: 0.3s;
+  }
+}
+
+@media all and (max-width: 480px) {
+  .repair-page .repairing-catalogue .sidebar {
+    width: 100%;
   }
 }
 
@@ -1203,12 +1210,6 @@ li {
 @media all and (max-width: 992px) {
   .repair-page .list-item__icon {
     margin-left: 20px;
-  }
-}
-
-@media all and (max-width: 768px) {
-  .repair-page .list-item__icon {
-    margin-left: 40px;
   }
 }
 
