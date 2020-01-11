@@ -10,6 +10,22 @@
 .services {
   margin-top: 120px;
 
+  @include _1024 {
+    margin-top: 90px;
+  }
+
+  @include _992 {
+    margin-top: 70px;
+  }
+
+  @include _768 {
+    margin-top: 50px;
+  }
+
+  @include _480 {
+    margin-top: 35px;
+  }
+
   // .container
 
   .container {
@@ -22,14 +38,33 @@
   .heading-box {
     margin-bottom: 60px;
 
+    @include _1024 {
+      margin-bottom: 40px;
+    }
+
+    @include _992 {
+      margin-bottom: 30px;
+    }
+
+    @include _768 {
+      margin-bottom: 20px;
+    }
+
     //heading-box__title
 
     .heading-box__title {
       font-weight: bold;
       font-size: 48px;
-      line-height: 60px;
       text-align: center;
       color: $textColor;
+
+      @include _992 {
+        font-size: 38px;
+      }
+
+      @include _560 {
+        font-size: 30px;
+      }
     }
   }
 
@@ -119,11 +154,22 @@
         &__title {
           font-weight: 600;
           font-size: 24px;
-          line-height: 30px;
           text-align: center;
           color: $textDarkColor;
           position: relative;
           z-index: 3;
+
+          @include _992 {
+            font-size: 22px;
+          }
+
+          @include _768 {
+            font-size: 20px;
+          }
+
+          @include _480 {
+            font-size: 18px;
+          }
         }
       }
     }
