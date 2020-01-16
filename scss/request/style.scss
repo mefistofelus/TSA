@@ -1,0 +1,145 @@
+// just simple import scss-partials
+@import "../variables"; // подключаем переменные
+@import "../mixins"; // подключаем миксины
+@import "../fonts"; // подключаем шрифты
+@import "../primeflex"; // подключаем flex-сетку из фреймворка PrimeNG
+@import "../default"; // подключаем дефолтные стили
+
+// Custom styles
+
+.request {
+  margin-top: 120px;
+
+  @include _1024 {
+    margin-top: 90px;
+  }
+
+  @include _992 {
+    margin-top: 70px;
+  }
+
+  // .container
+
+  .container {
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+
+  // .request__block
+
+  &__block {
+    padding: 43px;
+    height: 400px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    background: $contentBgColor;
+    border-radius: $borderRadius;
+    position: relative;
+    overflow: hidden;
+
+    @include _1170 {
+      height: 366px;
+    }
+
+    @include _992 {
+      height: 303px;
+    }
+
+    @include _768 {
+      height: 250px;
+    }
+
+    @include _560 {
+      height: 250px;
+    }
+
+    @include _480 {
+      padding: 20px;
+      height: 200px;
+    }
+
+    // .request__block::before
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: -webkit-gradient(linear, left bottom, left top, from(rgba(85, 105, 184, 0.64)), to(rgba(85, 105, 184, 0.64)));
+      background: linear-gradient(0deg, rgba(85, 105, 184, 0.64), rgba(85, 105, 184, 0.64));
+      opacity: 0;
+      z-index: 3;
+      -webkit-transition: $transitionDuration;
+      transition: $transitionDuration;
+    }
+
+    &:hover {
+      -webkit-box-shadow: 0px 8px 20px rgba(62, 64, 132, 0.24);
+      box-shadow: 0px 8px 20px rgba(62, 64, 132, 0.24);
+    }
+
+    &:hover::before {
+      opacity: 1;
+    }
+
+    &:hover .request__title {
+      color: $textLightColor;
+    }
+
+    &:hover .request__bg {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+
+    &:hover .request__background {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+  }
+
+  //.request__title
+
+  &__title {
+    font-weight: 600;
+    font-size: 48px;
+    color: $textColor;
+    position: relative;
+    z-index: 3;
+
+    @include _992 {
+      font-size: 36px;
+    }
+
+    @include _768 {
+      font-size: 28px;
+    }
+
+    @include _480 {
+      font-size: 24px;
+    }
+  }
+
+  //.request__bg
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+}
