@@ -332,8 +332,24 @@
           font-size: 20px;
         }
 
+        @include _560 {
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          font-size: 20px;
+          line-height: 29px;
+          /* fallback */
+          max-height: 59px;
+          /* fallback */
+          -webkit-line-clamp: 2;
+          /* number of lines to show */
+          -webkit-box-orient: vertical;
+        }
+
         @include _480 {
           font-size: 18px;
+          line-height: 27px;
+          max-height: 55px;
         }
       }
 
@@ -366,9 +382,12 @@
           letter-spacing: 0.08em;
           text-transform: uppercase;
           color: $textPrimaryColor;
+          /* white-space: nowrap;
+          text-overflow: ellipsis;
+          overflow: hidden; */
 
           &+.info__item {
-            margin-left: 30px;
+            margin-left: 40px;
           }
 
           &.date::before {
@@ -396,8 +415,9 @@
           // .answers__counter
 
           & .answers__counter {
+            font-weight: 600;
             font-size: 16px;
-            line-height: 20px;
+            line-height: 13px;
             color: $socialIconsColor;
           }
         }
