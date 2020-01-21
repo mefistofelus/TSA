@@ -16,129 +16,135 @@
 
   <body>
     <!-- HEADER START -->
-    <header class="header"
-      style="background: -webkit-gradient(linear, left top, left bottom, from(rgba(69, 64, 61, 0)), to(rgba(69, 64, 61, 0.6))), -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.1)));
-    background: linear-gradient(180deg, rgba(69, 64, 61, 0) 0%, rgba(69, 64, 61, 0.6) 100%), linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.1) 100%), url('../../img/landing-master/landing-master-header-bg.jpg');">
-      <div class="header-menu">
-        <div class="container">
-          <div class="header__inner">
-            <a href="/" class="header-logo">
-              <img src="../../img/logo.jpg" alt="TSA Logo">
-            </a>
-            <!-- /.header-logo -->
-            <nav class="header-nav">
-              <ul class="nav-list">
-                <li class="nav-list__item">
-                  <a href="#" class="nav-list__item-link">Ремонт</a>
-                </li>
-                <li class="nav-list__item">
-                  <a href="#" class="nav-list__item-link">Услуги</a>
-                </li>
-                <li class="nav-list__item">
-                  <a href="#" class="nav-list__item-link">оставить заявку</a>
-                </li>
-                <li class="nav-list__item">
-                  <a href="#" class="nav-list__item-link">Вопросы</a>
-                </li>
-              </ul>
-            </nav>
-            <!-- /.header-nav -->
-            <a href="#" class="btn__add-service">Добавить сервис</a>
-            <!-- /.header-btn -->
-            <a href="#" class="btn__profile">
-              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M4.68625 20.6863C6.42894 18.9436 8.50319 17.6536 10.7663 16.8726C8.34244 15.2032 6.75 12.4093 6.75 9.25C6.75 4.14956 10.8996 0 16 0C21.1004 0 25.25 4.14956 25.25 9.25C25.25 12.4093 23.6576 15.2032 21.2336 16.8726C23.4967 17.6536 25.571 18.9436 27.3137 20.6863C30.3357 23.7083 32 27.7262 32 32H29.5C29.5 24.5561 23.4439 18.5 16 18.5C8.55606 18.5 2.5 24.5561 2.5 32H0C0 27.7262 1.66431 23.7083 4.68625 20.6863ZM16 16C19.7219 16 22.75 12.972 22.75 9.25C22.75 5.528 19.7219 2.5 16 2.5C12.2781 2.5 9.25 5.528 9.25 9.25C9.25 12.972 12.2781 16 16 16Z" />
-              </svg>
-            </a>
-          </div>
-          <!-- /.header -->
-        </div>
-        <!-- /.container -->
-      </div>
-      <!-- /.header-menu -->
-      <div class="header-search">
-        <div class="container">
-          <h1 class="searchbar__title">Поиск сервисного центра в Санкт-Петербурге</h1>
-          <!-- HEADER SEARCHBAR -->
-          <div class="searchbar">
-            <div class="searchbar-inner">
-              <div class="searchbar__location">
-                <svg width="26" height="32" viewBox="0 0 26 32" fill="none" xmlns="http://www.w3.org/2000/svg"
-                  class="searchbar__location-icon">
+    <div class="header-bg" style="background-image: url('../../img/landing-master/landing-master-header-bg.jpg');">
+      <header class="header"
+        style="background: -webkit-gradient(linear, left top, left bottom, from(rgba(69, 64, 61, 0)), to(rgba(69, 64, 61, 0.6))), -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.1)));
+      background: linear-gradient(180deg, rgba(69, 64, 61, 0) 0%, rgba(69, 64, 61, 0.6) 100%), linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.1) 100%);">
+        <div class="header-menu">
+          <div class="container">
+            <div class="header__inner">
+              <a href="/" class="header-logo">
+                <img src="../../img/logo.jpg" alt="TSA Logo">
+              </a>
+              <!-- /.header-logo -->
+              <nav class="header-nav">
+                <ul class="nav-list">
+                  <li class="nav-list__item">
+                    <a href="#" class="nav-list__item-link">Ремонт</a>
+                  </li>
+                  <li class="nav-list__item">
+                    <a href="#" class="nav-list__item-link">Услуги</a>
+                  </li>
+                  <li class="nav-list__item">
+                    <a href="#" class="nav-list__item-link">оставить заявку</a>
+                  </li>
+                  <li class="nav-list__item">
+                    <a href="#" class="nav-list__item-link">Вопросы</a>
+                  </li>
+                </ul>
+              </nav>
+              <!-- /.header-nav -->
+              <a href="#" class="btn__add-service">Добавить сервис</a>
+              <!-- /.header-btn -->
+              <a href="#" class="btn__profile">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
-                    d="M13.0001 -0.0666504C6.22846 -0.0590983 0.740951 5.42841 0.733398 12.2C0.733398 18.8133 12.1227 31.2357 12.6082 31.7618C12.7089 31.8711 12.8511 31.9334 13.0001 31.9334C13.149 31.9334 13.291 31.8711 13.392 31.7618C13.8774 31.2357 25.2668 18.8133 25.2668 12.2C25.2592 5.42841 19.7717 -0.0590983 13.0001 -0.0666504ZM13.0001 30.6037C10.9735 28.3329 1.80007 17.742 1.80007 12.2C1.80007 6.01435 6.81439 1.00002 13.0001 1.00002C19.1858 1.00002 24.2001 6.01435 24.2001 12.2C24.2001 17.742 15.0266 28.3329 13.0001 30.6037Z" />
+                    d="M4.68625 20.6863C6.42894 18.9436 8.50319 17.6536 10.7663 16.8726C8.34244 15.2032 6.75 12.4093 6.75 9.25C6.75 4.14956 10.8996 0 16 0C21.1004 0 25.25 4.14956 25.25 9.25C25.25 12.4093 23.6576 15.2032 21.2336 16.8726C23.4967 17.6536 25.571 18.9436 27.3137 20.6863C30.3357 23.7083 32 27.7262 32 32H29.5C29.5 24.5561 23.4439 18.5 16 18.5C8.55606 18.5 2.5 24.5561 2.5 32H0C0 27.7262 1.66431 23.7083 4.68625 20.6863ZM16 16C19.7219 16 22.75 12.972 22.75 9.25C22.75 5.528 19.7219 2.5 16 2.5C12.2781 2.5 9.25 5.528 9.25 9.25C9.25 12.972 12.2781 16 16 16Z" />
                 </svg>
-                <div class="searchbar-city-wrappper">
-                  <div class="searchbar__location-descr">Искать в</div>
-                  <div class="searchbar__location-city">Санкт-Петербург
-                    <!-- <select name="current-city">
-                    <option value="Санкт-Петербург" selected>Санкт-Петербург</option>
-                    <option value="Кременчуг-Константиновское">Кременчуг-Константиновское</option>
-                    <option value="Верхненовокутлумбетьево">Верхненовокутлумбетьево</option>
-                    <option value="Старокозьмодемьяновское ">Старокозьмодемьяновское </option>
-                  </select> -->
+              </a>
+            </div>
+            <!-- /.header -->
+          </div>
+          <!-- /.container -->
+        </div>
+        <!-- /.header-menu -->
+        <div class="header-search">
+          <div class="container">
+            <h1 class="searchbar__title">Поиск сервисного центра в Санкт-Петербурге</h1>
+            <!-- HEADER SEARCHBAR -->
+            <div class="searchbar">
+              <div class="searchbar-inner">
+                <div class="searchbar__location">
+                  <svg width="26" height="32" viewBox="0 0 26 32" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    class="searchbar__location-icon">
+                    <path
+                      d="M13.0001 -0.0666504C6.22846 -0.0590983 0.740951 5.42841 0.733398 12.2C0.733398 18.8133 12.1227 31.2357 12.6082 31.7618C12.7089 31.8711 12.8511 31.9334 13.0001 31.9334C13.149 31.9334 13.291 31.8711 13.392 31.7618C13.8774 31.2357 25.2668 18.8133 25.2668 12.2C25.2592 5.42841 19.7717 -0.0590983 13.0001 -0.0666504ZM13.0001 30.6037C10.9735 28.3329 1.80007 17.742 1.80007 12.2C1.80007 6.01435 6.81439 1.00002 13.0001 1.00002C19.1858 1.00002 24.2001 6.01435 24.2001 12.2C24.2001 17.742 15.0266 28.3329 13.0001 30.6037Z" />
+                  </svg>
+                  <div class="searchbar-city-wrappper">
+                    <div class="searchbar__location-descr">Искать в</div>
+                    <div class="searchbar__location-city">Санкт-Петербург
+                      <!-- <select name="current-city">
+                      <option value="Санкт-Петербург" selected>Санкт-Петербург</option>
+                      <option value="Кременчуг-Константиновское">Кременчуг-Константиновское</option>
+                      <option value="Верхненовокутлумбетьево">Верхненовокутлумбетьево</option>
+                      <option value="Старокозьмодемьяновское ">Старокозьмодемьяновское </option>
+                    </select> -->
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="searchbar__request">
-                <form action="#" class="searchbar__request-form">
-                  <input type="search" class="form-input" placeholder="Быстрый поиск">
-                  <button type="submit" class="form-btn">
-                    <img src="../../img/repair/searchbar-icon.svg" alt="Search" class="form-icon"
-                      class="list-item__icon">
-                  </button>
-                </form>
+                <div class="searchbar__request">
+                  <form action="#" class="searchbar__request-form">
+                    <input type="search" class="form-input" placeholder="Быстрый поиск">
+                    <button type="submit" class="form-btn">
+                      <img src="../../img/repair/searchbar-icon.svg" alt="Search" class="form-icon"
+                        class="list-item__icon">
+                    </button>
+                  </form>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <!-- /.header-search -->
-      <div class="header-info">
-        <h4 class="header-info__title">Популярные производители
-          <!--  <svg width="100%" height="1">
-            <line x1="0" y1="0" x2="100%" y2="0" stroke="#BDBDBD" stroke-dasharray="650" stroke-dashoffset="370" />
-          </svg> -->
-        </h4>
-        <ul class="header-info__list">
-          <li class="list_-item">
-            <img src="../../img/landing-master/apple-black.png" alt="apple"
-              srcset="../../img/landing-master/apple-black@2x.png 2x">
-          </li>
-          <li class="list_-item">
-            <img src="../../img/landing-master/philips.png" alt="philips"
-              srcset="../../img/landing-master/philips@2x.png 2x">
-          </li>
-          <li class="list_-item">
-            <img src="../../img/landing-master/lenovo.png" alt="lenovo"
-              srcset="../../img/landing-master/lenovo@2x.png 2x">
-          </li>
-          <li class="list_-item">
-            <img src="../../img/landing-master/lg-electronics.png" alt="lg"
-              srcset="../../img/landing-master/lg-electronics@2x.png 2x">
-          </li>
-          <li class="list_-item">
-            <img src="../../img/landing-master/bosch.png" alt="bosch" srcset="../../img/landing-master/bosch@2x.png 2x">
-          </li>
-          <li class="list_-item">
-            <img src="../../img/landing-master/nokia.png" alt="nokia" srcset="../../img/landing-master/nokia@2x.png 2x">
-          </li>
-          <li class="list_-item">
-            <img src="../../img/landing-master/ariston.png" alt="ariston"
-              srcset="../../img/landing-master/ariston@2x.png 2x">
-          </li>
-          <li class="list_-item">
-            <img src="../../img/landing-master/asus.png" alt="asus" srcset="../../img/landing-master/asus@2x.png 2x">
-          </li>
-          <li class="list_-item">
-            <img src="../../img/landing-master/sony.png" alt="sony" srcset="../../img/landing-master/sony@2x.png 2x">
-          </li>
-        </ul>
-      </div>
-      <!-- /.header-info -->
-    </header>
-    <!-- /.header -->
+        <!-- /.header-search -->
+        <div class="header-info">
+          <div class="heading-wrapper">
+            <span class="heading-line"></span>
+            <h4 class="header-info__title">Популярные производители
+            </h4>
+            <span class="heading-line"></span>
+          </div>
+          <ul class="header-info__list">
+            <li class="list_-item">
+              <img src="../../img/landing-master/apple-black.png" alt="apple"
+                srcset="../../img/landing-master/apple-black@2x.png 2x">
+            </li>
+            <li class="list_-item">
+              <img src="../../img/landing-master/philips.png" alt="philips"
+                srcset="../../img/landing-master/philips@2x.png 2x">
+            </li>
+            <li class="list_-item">
+              <img src="../../img/landing-master/lenovo.png" alt="lenovo"
+                srcset="../../img/landing-master/lenovo@2x.png 2x">
+            </li>
+            <li class="list_-item">
+              <img src="../../img/landing-master/lg-electronics.png" alt="lg"
+                srcset="../../img/landing-master/lg-electronics@2x.png 2x">
+            </li>
+            <li class="list_-item">
+              <img src="../../img/landing-master/bosch.png" alt="bosch"
+                srcset="../../img/landing-master/bosch@2x.png 2x">
+            </li>
+            <li class="list_-item">
+              <img src="../../img/landing-master/nokia.png" alt="nokia"
+                srcset="../../img/landing-master/nokia@2x.png 2x">
+            </li>
+            <li class="list_-item">
+              <img src="../../img/landing-master/ariston.png" alt="ariston"
+                srcset="../../img/landing-master/ariston@2x.png 2x">
+            </li>
+            <li class="list_-item">
+              <img src="../../img/landing-master/asus.png" alt="asus" srcset="../../img/landing-master/asus@2x.png 2x">
+            </li>
+            <li class="list_-item">
+              <img src="../../img/landing-master/sony.png" alt="sony" srcset="../../img/landing-master/sony@2x.png 2x">
+            </li>
+          </ul>
+        </div>
+        <!-- /.header-info -->
+      </header>
+      <!-- /.header -->
+    </div>
+    <!-- /.header-overlay -->
     <!-- HEADER END -->
 
     <!-- FOOTER START -->
