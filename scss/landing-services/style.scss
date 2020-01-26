@@ -1,0 +1,277 @@
+// just simple import scss-partials
+@import "../variables"; // подключаем переменные
+@import "../mixins"; // подключаем миксины
+@import "../fonts"; // подключаем шрифты
+@import "../primeflex"; // подключаем flex-сетку из фреймворка PrimeNG
+@import "../default"; // подключаем дефолтные стили
+
+// Custom styles
+
+.services {
+  margin-top: 120px;
+  padding: 0 15px;
+  overflow-x: hidden;
+
+  @include _1024 {
+    margin-top: 90px;
+  }
+
+  @include _992 {
+    margin-top: 70px;
+  }
+
+  @include _768 {
+    padding: 0 10px;
+    margin-top: 50px;
+  }
+
+  @include _480 {
+    margin-top: 35px;
+  }
+
+  @include _360 {
+    padding: 0 5px;
+  }
+
+  // .container
+
+  .container {
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+
+  //.heading-box
+
+  .heading-box {
+    margin-bottom: 12px;
+
+    @include _992 {
+      margin-bottom: 10px;
+    }
+
+    //heading-box__title
+
+    .heading-box__title {
+      font-weight: bold;
+      font-size: 48px;
+      line-height: 60px;
+      text-align: left;
+      color: $textColor;
+
+      @include _1280 {
+        font-size: 45px;
+        line-height: 55px;
+      }
+
+      @include _1170 {
+        font-size: 39px;
+        line-height: 57px;
+      }
+
+      @include _1024 {
+        font-size: 38px;
+        line-height: 48px;
+      }
+
+      @include _992 {
+        font-size: 28px;
+        line-height: 36px;
+      }
+
+      @include _768 {
+        font-size: 32px;
+        text-align: center;
+      }
+
+      @include _560 {
+        font-size: 28px;
+      }
+
+      @include _480 {
+        font-size: 26px;
+      }
+    }
+  }
+
+  // .sidebar-text
+
+  .sidebar-text {
+    margin-bottom: 60px;
+    font-size: 20px;
+    line-height: 160%;
+    color: $textPrimaryColor;
+
+    @include _1024 {
+      font-size: 18px;
+      line-height: 140%;
+    }
+
+    @include _992 {
+      margin-bottom: 40px;
+    }
+
+    @include _768 {
+      margin-bottom: 30px;
+      font-size: 16px;
+      line-height: 130%;
+    }
+
+    p+p {
+      margin-top: 30px;
+
+      @include _768 {
+        margin-top: 15px;
+      }
+    }
+  }
+
+  // .sidebar-btn
+
+  .sidebar-btn {
+
+    @include _768 {
+      text-align: center;
+    }
+
+    .btn {
+      padding: 20px 80px;
+      font-weight: bold;
+      font-size: 18px;
+      text-align: center;
+      color: $primaryTextColor;
+      background-color: $accentColor;
+      border: none;
+      border-radius: $btnBorderRadius;
+      cursor: pointer;
+      white-space: nowrap;
+
+      &:focus {
+        outline: none;
+      }
+
+      @include _992 {
+        padding-left: 65px;
+        padding-right: 65px;
+        ;
+      }
+
+      @include _992 {
+        padding-left: 70px;
+        padding-right: 70px;
+      }
+
+      @include _560 {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        width: 100%;
+      }
+    }
+  }
+
+  // .services__category
+
+  &__category {
+
+    // .services__category-item
+
+    &-item {
+      height: 110px;
+      padding: 0 40px;
+      display: -webkit-box;
+      display: flex;
+      -webkit-box-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      justify-content: center;
+      background-color: $contentBgColor;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      border-radius: $borderRadius;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      -webkit-transition: $transitionDuration;
+      transition: $transitionDuration;
+
+      // .services__category-item::before
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: $borderRadius;
+        background: -webkit-gradient(linear, left bottom, left top, from(rgba(85, 105, 184, 0.64)), to(rgba(85, 105, 184, 0.64)));
+        background: linear-gradient(0deg, rgba(85, 105, 184, 0.64), rgba(85, 105, 184, 0.64));
+        opacity: 0;
+        z-index: 2;
+        -webkit-transition: $transitionDuration;
+        transition: $transitionDuration;
+      }
+
+      &:hover {
+        box-shadow: 0px 8px 20px rgba(62, 64, 132, 0.24);
+      }
+
+      &:hover::before {
+        opacity: 1;
+      }
+
+      &:hover .category-item__title {
+        color: $textLightColor;
+      }
+
+      &:hover .category-item__bg {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+      }
+
+      // .category-item
+
+      .category-item {
+
+        // .category-item__bg
+
+        &__bg {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-position: center center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          border-radius: $borderRadius;
+          -webkit-transform: scale(0);
+          transform: scale(0);
+        }
+
+        // .category-item__title
+
+        &__title {
+          font-weight: 600;
+          font-size: 24px;
+          text-align: center;
+          color: $textDarkColor;
+          position: relative;
+          z-index: 3;
+
+          @include _992 {
+            font-size: 22px;
+          }
+
+          @include _768 {
+            font-size: 20px;
+          }
+
+          @include _480 {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+}

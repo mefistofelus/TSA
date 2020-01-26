@@ -826,6 +826,8 @@ li {
 
 .services {
   margin-top: 120px;
+  padding: 0 15px;
+  overflow-x: hidden;
 }
 
 @media all and (max-width: 1024px) {
@@ -842,6 +844,7 @@ li {
 
 @media all and (max-width: 768px) {
   .services {
+    padding: 0 10px;
     margin-top: 50px;
   }
 }
@@ -852,49 +855,162 @@ li {
   }
 }
 
+@media all and (max-width: 360px) {
+  .services {
+    padding: 0 5px;
+  }
+}
+
 .services .container {
   max-width: 1280px;
   margin: 0 auto;
 }
 
 .services .heading-box {
-  margin-bottom: 60px;
-}
-
-@media all and (max-width: 1024px) {
-  .services .heading-box {
-    margin-bottom: 40px;
-  }
+  margin-bottom: 12px;
 }
 
 @media all and (max-width: 992px) {
   .services .heading-box {
-    margin-bottom: 30px;
-  }
-}
-
-@media all and (max-width: 768px) {
-  .services .heading-box {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
 }
 
 .services .heading-box .heading-box__title {
   font-weight: bold;
   font-size: 48px;
-  text-align: center;
+  line-height: 60px;
+  text-align: left;
   color: #0C253D;
+}
+
+@media all and (max-width: 1280px) {
+  .services .heading-box .heading-box__title {
+    font-size: 45px;
+    line-height: 55px;
+  }
+}
+
+@media all and (max-width: 1170px) {
+  .services .heading-box .heading-box__title {
+    font-size: 39px;
+    line-height: 57px;
+  }
+}
+
+@media all and (max-width: 1024px) {
+  .services .heading-box .heading-box__title {
+    font-size: 38px;
+    line-height: 48px;
+  }
 }
 
 @media all and (max-width: 992px) {
   .services .heading-box .heading-box__title {
-    font-size: 38px;
+    font-size: 28px;
+    line-height: 36px;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .services .heading-box .heading-box__title {
+    font-size: 32px;
+    text-align: center;
   }
 }
 
 @media all and (max-width: 560px) {
   .services .heading-box .heading-box__title {
-    font-size: 30px;
+    font-size: 28px;
+  }
+}
+
+@media all and (max-width: 480px) {
+  .services .heading-box .heading-box__title {
+    font-size: 26px;
+  }
+}
+
+.services .sidebar-text {
+  margin-bottom: 60px;
+  font-size: 20px;
+  line-height: 160%;
+  color: #969FC2;
+}
+
+@media all and (max-width: 1024px) {
+  .services .sidebar-text {
+    font-size: 18px;
+    line-height: 140%;
+  }
+}
+
+@media all and (max-width: 992px) {
+  .services .sidebar-text {
+    margin-bottom: 40px;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .services .sidebar-text {
+    margin-bottom: 30px;
+    font-size: 16px;
+    line-height: 130%;
+  }
+}
+
+.services .sidebar-text p + p {
+  margin-top: 30px;
+}
+
+@media all and (max-width: 768px) {
+  .services .sidebar-text p + p {
+    margin-top: 15px;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .services .sidebar-btn {
+    text-align: center;
+  }
+}
+
+.services .sidebar-btn .btn {
+  padding: 20px 80px;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+  color: #FFFFFF;
+  background-color: #E59746;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.services .sidebar-btn .btn:focus {
+  outline: none;
+}
+
+@media all and (max-width: 992px) {
+  .services .sidebar-btn .btn {
+    padding-left: 65px;
+    padding-right: 65px;
+  }
+}
+
+@media all and (max-width: 992px) {
+  .services .sidebar-btn .btn {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+}
+
+@media all and (max-width: 560px) {
+  .services .sidebar-btn .btn {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: 100%;
   }
 }
 
@@ -911,6 +1027,9 @@ li {
   -ms-flex-pack: center;
       justify-content: center;
   background-color: #F9F9FB;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
   border-radius: 16px;
   position: relative;
   overflow: hidden;
@@ -926,6 +1045,7 @@ li {
   left: 0;
   right: 0;
   bottom: 0;
+  border-radius: 16px;
   background: -webkit-gradient(linear, left bottom, left top, from(rgba(85, 105, 184, 0.64)), to(rgba(85, 105, 184, 0.64)));
   background: linear-gradient(0deg, rgba(85, 105, 184, 0.64), rgba(85, 105, 184, 0.64));
   opacity: 0;
@@ -958,6 +1078,10 @@ li {
   left: 0;
   width: 100%;
   height: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 16px;
   -webkit-transform: scale(0);
   transform: scale(0);
 }
